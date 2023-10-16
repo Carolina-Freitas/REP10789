@@ -3,26 +3,25 @@
 using namespace std;
 
 int main() {
-    double notas[4];
-    double soma = 0;
+    double nota1, nota2, nota3, nota4;
+    double media;
 
-    for (int i = 0; i < 4; i++) {
-        cout << "Insira a nota " << (i + 1) << ": ";
-        cin >> notas[i];
-        soma += notas[i];
-    }
+    cout << "Insira a nota 1 (50%): ";
+    cin >> nota1;
 
-    double media = soma / 4;
+    cout << "Insira a nota 2 (10%): ";
+    cin >> nota2;
 
-    cout << "Notas inseridas: ";
-    for (int i = 0; i < 4; i++) {
-        cout << notas[i];
-        if (i < 3) {
-            cout << ", ";
-        }
-    }
+    cout << "Insira a nota 3 (10%): ";
+    cin >> nota3;
 
-    cout << "\nMédia das notas: " << media << endl;
+    cout << "Insira a nota 4 (30%): ";
+    cin >> nota4;
+
+    media = (nota1 * 0.5 + nota2 * 0.1 + nota3 * 0.1 + nota4 * 0.3);
+
+    cout << "Notas inseridas: " << nota1 << ", " << nota2 << ", " << nota3 << ", " << nota4 << endl;
+    cout << "Média ponderada das notas: " << media << endl;
 
     return 0;
 }
